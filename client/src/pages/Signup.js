@@ -5,38 +5,15 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import React, { useState, useEffect } from "react";
-function Login() {
-    // setting initial state 
-    const [formObject, setFormObject] = useState({})
-    // 
-    function handleFormSubmit(event) {
-        event.preventDefault();
-        console.log("you got here")
-        //if (formObject.title && formObject.author) {
-        //  API.saveBook({
-          //  title: formObject.title,
-          //  author: formObject.author,
-          //  synopsis: formObject.synopsis
-        //  })
-          //  .then(res => loadBooks())
-           // .catch(err => console.log(err));
-       // }
-      };
-      function handleInputChange(event) {
-        const { name, value } = event.target;
-        setFormObject({...formObject, [name]: value})
-      };
+
+function Signup() {
     return (
         <Container fluid>
             <div className="hero is-primary is-bold">
                 <div className="hero-body">
                     <div className="container animation">
                         <div className="animate seven">
-                            <span>m</span><span>y</span><span>N</span><span>o</span><span>t</span><span>e</span><span>s</span>
-
-                            <h2 className="subtitle">
-                                Your personalized private note-taker!
-                        </h2>
+                        <span>D</span><span>i</span><span>n</span><span>D</span><span>e</span><span>r</span>
                         </div>
                     </div>
                 </div>
@@ -44,15 +21,14 @@ function Login() {
             <section className="section wrapper">
                 <div className="container">
                     <h1 className="title">
-                        Login Form
+                        Sign Up Form
                 </h1>
                     <p className="subtitle">
-                        Enter email and password below to access <strong>myNotes</strong>.
+                        Enter email and password below to access <strong>DinDer</strong>.
                 </p>
-                <form>
                     <div className="field">
                         <p className="control has-icons-left has-icons-right">
-                            <input onChange= {handleInputChange} id="email_input" className="input" type="email" placeholder="Email">
+                            <input id="email_input" className="input" type="email" placeholder="Email">
                             </input>
                             <span className="icon is-small is-left">
                                 <i className="fas fa-envelope"></i>
@@ -61,7 +37,7 @@ function Login() {
                     </div>
                     <div className="field">
                         <p className="control has-icons-left">
-                            <input onChange= {handleInputChange} id="password-Input" className="input" type="password" placeholder="Password">
+                            <input id="password-input" className="input" type="password" placeholder="Password">
                             </input>
                             <span className="icon is-small is-left">
                                 <i className="fas fa-lock"></i>
@@ -70,13 +46,12 @@ function Login() {
                     </div>
                     <div className="field">
                         <p className="control">
-                            <FormBtn id="form_login" onClick={handleFormSubmit}>
-                                Login
-                    </FormBtn>
+                            <button id="form_signup" className="button is-success">
+                                Sign Up
+                    </button>
                         </p>
                     </div>
-                    </form>
-                    <p>Don't have an account? Sign up <a href="/signup">HERE</a></p>
+                    <p>Already have an account? Login <a href="/">HERE</a></p>
                 </div>
             </section>
 
@@ -84,4 +59,4 @@ function Login() {
     )
 }
 
-export default Login;
+export default Signup;
