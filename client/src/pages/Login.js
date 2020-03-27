@@ -6,6 +6,26 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import React, { useState, useEffect } from "react";
 function Login() {
+    // setting initial state 
+    const [formObject, setFormObject] = useState({})
+    // 
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        console.log("you got here")
+        //if (formObject.title && formObject.author) {
+        //  API.saveBook({
+          //  title: formObject.title,
+          //  author: formObject.author,
+          //  synopsis: formObject.synopsis
+        //  })
+          //  .then(res => loadBooks())
+           // .catch(err => console.log(err));
+       // }
+      };
+      function handleInputChange(event) {
+        const { name, value } = event.target;
+        setFormObject({...formObject, [name]: value})
+      };
     return (
         <Container fluid>
             <div className="hero is-primary is-bold">
@@ -29,9 +49,10 @@ function Login() {
                     <p className="subtitle">
                         Enter email and password below to access <strong>myNotes</strong>.
                 </p>
+                <form>
                     <div className="field">
                         <p className="control has-icons-left has-icons-right">
-                            <input id="email_input" className="input" type="email" placeholder="Email">
+                            <input onChange= {handleInputChange} id="email_input" className="input" type="email" placeholder="Email">
                             </input>
                             <span className="icon is-small is-left">
                                 <i className="fas fa-envelope"></i>
@@ -40,7 +61,7 @@ function Login() {
                     </div>
                     <div className="field">
                         <p className="control has-icons-left">
-                            <input id="password-input" className="input" type="password" placeholder="Password">
+                            <input onChange= {handleInputChange} id="password-Input" className="input" type="password" placeholder="Password">
                             </input>
                             <span className="icon is-small is-left">
                                 <i className="fas fa-lock"></i>
@@ -49,11 +70,12 @@ function Login() {
                     </div>
                     <div className="field">
                         <p className="control">
-                            <button id="form_login" className="button is-success">
+                            <FormBtn id="form_login" onClick={handleFormSubmit}>
                                 Login
-                    </button>
+                    </FormBtn>
                         </p>
                     </div>
+                    </form>
                     <p>Don't have an account? Sign up <a href="/signup">HERE</a></p>
                 </div>
             </section>
