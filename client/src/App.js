@@ -1,19 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Books";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
-import Login from "./pages/Login"
+// import Nav from "./components/Nav";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
 
 function App() {
   return (
     <Router>
       <div>
-        <Nav />
+        {/* <Nav /> */}
         <Switch>
           <Route exact path={"/"}>
             <Login />
+          </Route>
+          <Route exact path={"/signup"}>
+            <Signup />
           </Route>
           <Route exact path="/dnderhome">
             <Detail />
