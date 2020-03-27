@@ -47,6 +47,7 @@ function Signup() {
                     <p className="subtitle">
                         Enter email and password below to access <strong>DinDer</strong>.
                 </p>
+
                     <form>
                         <div className="field">
                             <p className="control has-icons-left has-icons-right">
