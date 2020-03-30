@@ -4,7 +4,7 @@ import { Col, Row, Container } from "../components/Grid";
 // import Jumbotron from "../components/Jumbotron"; CHANGE THIS TO HERO
 import API from "../utils/API";
 
-function Detail(props) {
+function Home(props) {
   const [user, setUser] = useState({})
 
   // When this component mounts, grab the book with the _id of props.match.params.id
@@ -201,4 +201,4 @@ function Detail(props) {
   }
 
 
-export default Home;
+export default Home(props);
