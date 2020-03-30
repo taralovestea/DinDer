@@ -5,28 +5,30 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 function Signup() {
+    const history = useHistory();
     const [formObject, setFormObject] = useState({})
 
     function handleFormSubmit(event) {
+        history.push("/dnderhome")
         event.preventDefault();
         console.log("you've reached this point - sign up")
-        // if (formObject.title && formObject.author) {
-        //     API.saveUser({
-        //         title: formObject.title,
-        //         author: formObject.author,
-        //         synopsis: formObject.synopsis
-        //     })
-        //         .then(res => loadBooks())
-        //         .catch(err => console.log(err));
-        // }
+        {
+            API.saveUser({
+                email: formObject.email,
+                password: formObject.password
+            })
+                // .then(res => loadUser())
+                .catch(err => console.log(err));
+        }
     };
 
     function handleInputChange(event) {
         const { name, value } = event.target;
-        setFormObject({...formObject, [name]: value})
-      };
+        setFormObject({ ...formObject, [name]: value })
+    };
 
     return (
         <Container fluid>
