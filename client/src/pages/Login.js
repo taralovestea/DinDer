@@ -5,6 +5,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import React, { useState, useEffect } from "react";
+import Card from "../components/card";
 function Login() {
     return (
         <Container fluid>
@@ -57,6 +58,7 @@ function Login() {
                     <p>Don't have an account? Sign up <a href="/signup">HERE</a></p>
                 </div>
             </section>
+            <div><Card/></div>
 
         </Container>
     )

@@ -5,6 +5,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import React, { useState, useEffect } from "react";
+import Card from "../components/card";
 
 function Signup() {
     return (
@@ -54,7 +55,7 @@ function Signup() {
                     <p>Already have an account? Login <a href="/">HERE</a></p>
                 </div>
             </section>
-
+            <div><Card/></div>
         </Container>
     )
 }
