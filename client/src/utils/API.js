@@ -9,11 +9,10 @@ export default {
   loginUser: function (id) {
     return axios.get("/api/home/" + id);
   },
-  
-  // Gets all books
-  // getBooks: function() {
-  //   return axios.get("/api/books");
-  // },
+  // Gets user
+  getUser: function(id) {
+    return axios.get("/api/user/" + id);
+  },
 
   // // Deletes the book with the given id
   // deleteBook: function(id) {

@@ -19,8 +19,8 @@ function App() {
           <Route exact path={"/signup"}>
             <Signup />
           </Route>
-          <Route exact path="/home">
-            <Detail />
+          <Route exact path={"/home"}>
+            <Home />
           </Route>
           <Route>
             <NoMatch />
