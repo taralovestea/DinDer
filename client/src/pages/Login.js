@@ -19,7 +19,7 @@ function Login() {
                 email: formObject.email,
                 password: formObject.password
             })
-                .then(res => loadUser())
+                .then()
                 .catch(err => console.log(err));
         }
     };
