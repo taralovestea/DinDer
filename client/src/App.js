@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Detail from "./pages/Detail";
+import Home from "./pages/Home";
 import NoMatch from "./pages/NoMatch";
 // import Nav from "./components/Nav";
 import Login from "./pages/Login";
@@ -19,7 +19,7 @@ function App() {
           <Route exact path={"/signup"}>
             <Signup />
           </Route>
-          <Route exact path="/dnderhome">
+          <Route exact path="/home">
             <Detail />
           </Route>
           <Route>
