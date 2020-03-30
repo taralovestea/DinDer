@@ -21,7 +21,6 @@ function Login() {
         event.preventDefault();
 
         console.log("you got here")
-
         API.loginUser({
             email: formObject.email,
             password: formObject.password
