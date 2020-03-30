@@ -3,11 +3,11 @@ import "./style.css";
 
 
 export function heroBody() {
-return  <div className="hero is-primary is-bold">
+return  <div className="hero is-warning is-bold">
 <div className="hero-body">
     <div className="container animation">
         <div className="animate seven">
-            <span>m</span><span>y</span><span>N</span><span>o</span><span>t</span><span>e</span><span>s</span>
+            <span>d</span><span>i</span><span>n</span><span>D</span><span>e</span><span>r</span>
 
             <h2 className="subtitle">
                 Your personalized private note-taker!
