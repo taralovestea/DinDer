@@ -34,11 +34,11 @@ function Signup() {
 
     return (
         <Container fluid>
-            <div className="hero is-primary is-bold">
+            <div className="hero is-warning is-bold">
                 <div className="hero-body">
                     <div className="container animation">
                         <div className="animate seven">
-                            <span>D</span><span>i</span><span>n</span><span>D</span><span>e</span><span>r</span>
+                            <span>d</span><span>i</span><span>n</span><span>D</span><span>e</span><span>r</span>
                         </div>
                     </div>
                 </div>

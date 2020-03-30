@@ -38,12 +38,15 @@ export default function ImgMediaCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <button className="button is-small is-warning is-light">
           button1 
-        </Button>
-        <Button size="small" color="primary">
+        </button>
+        <button className="button is-medium is-warning is-light">
           button2
-        </Button>
+        </button>
+        <button className="button is-large is-warning is-light">
+          button3
+        </button>
       </CardActions>
     </Card>
   );

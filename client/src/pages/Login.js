@@ -43,7 +43,7 @@ return (
                     Login Form
                 </h1>
                 <p className="subtitle">
-                    Enter email and password below to access <strong>myNotes</strong>.
+                Enter email and password below to access <strong>DinDer</strong>.
                 </p>
                 <form>
                     <div className="field">
