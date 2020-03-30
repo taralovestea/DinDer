@@ -15,7 +15,6 @@ function Signup() {
     const [formObject, setFormObject] = useState({})
 
     function handleFormSubmit(event) {
-        history.push("/dnderhome")
         event.preventDefault();
         console.log("you've reached this point - sign up")
         {
@@ -23,7 +22,7 @@ function Signup() {
                 email: formObject.email,
                 password: formObject.password
             })
-                // .then(res => loadUser())
+                .then(history.push("/home"))
                 .catch(err => console.log(err));
         }
     };
