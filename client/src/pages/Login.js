@@ -6,6 +6,10 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import React, { useState, useEffect } from "react";
 
+import Card from "../components/card";
+
+
+
 function Login() {
     const [formObject, setFormObject] = useState({})
 
@@ -80,6 +84,7 @@ function Login() {
                     <p>Don't have an account? Sign up <a href="/signup">HERE</a></p>
                 </div>
             </section>
+            <div><Card/></div>
 
         </Container>
     )
