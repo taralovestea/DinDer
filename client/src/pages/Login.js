@@ -5,6 +5,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import React, { useState, useEffect } from "react";
+import HeroBody from "../components/heroBody";
 
 function Login() {
     const [formObject, setFormObject] = useState({})
@@ -19,7 +20,7 @@ function Login() {
                 email: formObject.email,
                 password: formObject.password
             })
-                .then(res => loadUser())
+                // .then(res => loadUser())
                 .catch(err => console.log(err));
         }
     };
@@ -29,19 +30,7 @@ function Login() {
     };
     return (
         <Container fluid>
-            <div className="hero is-primary is-bold">
-                <div className="hero-body">
-                    <div className="container animation">
-                        <div className="animate seven">
-                            <span>m</span><span>y</span><span>N</span><span>o</span><span>t</span><span>e</span><span>s</span>
-
-                            <h2 className="subtitle">
-                                Your personalized private note-taker!
-                        </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           <HeroBody />
             <section className="section wrapper">
                 <div className="container">
                     <h1 className="title">
