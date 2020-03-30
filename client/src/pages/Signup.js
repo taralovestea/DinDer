@@ -5,6 +5,9 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import React, { useState, useEffect } from "react";
+
+import Card from "../components/card";
+
 import { useHistory } from "react-router-dom";
 
 function Signup() {
@@ -12,7 +15,6 @@ function Signup() {
     const [formObject, setFormObject] = useState({})
 
     function handleFormSubmit(event) {
-        history.push("/dnderhome")
         event.preventDefault();
         console.log("you've reached this point - sign up")
         {
@@ -20,7 +22,7 @@ function Signup() {
                 email: formObject.email,
                 password: formObject.password
             })
-                // .then(res => loadUser())
+                .then(history.push("/home"))
                 .catch(err => console.log(err));
         }
     };
@@ -32,11 +34,11 @@ function Signup() {
 
     return (
         <Container fluid>
-            <div className="hero is-primary is-bold">
+            <div className="hero is-warning is-bold">
                 <div className="hero-body">
                     <div className="container animation">
                         <div className="animate seven">
-                            <span>D</span><span>i</span><span>n</span><span>D</span><span>e</span><span>r</span>
+                            <span>d</span><span>i</span><span>n</span><span>D</span><span>e</span><span>r</span>
                         </div>
                     </div>
                 </div>
@@ -80,7 +82,7 @@ function Signup() {
                     <p>Already have an account? Login <a href="/">HERE</a></p>
                 </div>
             </section>
-
+            <div><Card/></div>
         </Container>
     )
 }
