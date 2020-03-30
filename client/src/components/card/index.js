@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ImgMediaCard() {
+export default function ImgMediaCard(props) {
   const classes = useStyles();
 
   return (
@@ -24,16 +24,16 @@ export default function ImgMediaCard() {
           component="img"
           alt="Make {user.username}'s image"
           height="140"
-          src="https://via.placeholder.com/150"
+          src={props.src}
           title="Make {user.username}'s image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {props.name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {/* will be user.bio */}
-            Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard Lizard 
+              {props.bio}
           </Typography>
         </CardContent>
       </CardActionArea>
