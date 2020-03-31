@@ -53,42 +53,41 @@ function Home(props) {
               </article>
             </div>
 
-            <div className="tile is-parent">
-              <article className="tile is-child has-text-centered">
-                <p className="title"><a className="button is-warning is-outlined is-large">
-                  {/* <span style='font-size:50px;'>&#128377;</span> */}
-                </a></p>
-                <p className="subtitle">Lets play!</p>
-                <br/><br/>
-                <p className="title is-center"><a className="button is-warning is-outlined is-large">
-                  {/* <span style='font-size:50px;'>&#128581;</span> */}
-                </a></p>
-                <p className="subtitle">Hard pass!</p>
-              </article>
-              <div className="tile is-parent">
-                <article className="tile is-child notification has-background-grey-lighter">
-                  <figure className="image is-128x128">
-                    <img className="is-rounded" id="user_icon" src="https://bulma.io/images/placeholders/128x128.png"></img>
-                  </figure>
+          <UserTile>
+            
+          </UserTile>
 
-                      <p className="title">taralovestea</p>
-                      <p className="subtitle">What is up?</p>
-                      <p> <b>Stats:</b></p>
-                    </article>
-                  </div>
-        </div>
+          <div className="tile is-parent">
+            <article className="tile is-child has-text-centered">
+              <p className="title"><a className="button is-warning is-outlined is-large">
+                {/* <span style='font-size:50px;'>&#128377;</span> */}
+              </a></p>
+              <p className="subtitle">Lets play!</p>
+              <br /><br />
+              <p className="title is-center"><a className="button is-warning is-outlined is-large">
+                {/* <span style='font-size:50px;'>&#128581;</span> */}
+              </a></p>
+              <p className="subtitle">Hard pass!</p>
+            </article>
+
+            <UserTile>
+
+            </UserTile>
+
+
+          </div>
         </div>
       </section>
 
-            {/* MATCHING ENDS */}
+      {/* MATCHING ENDS */}
 
-            {/* DINDER STATS + USER MATCHES */}
+      {/* DINDER STATS + USER MATCHES */}
 
         <WebStats />
 
-            {/* DINDER STATS + USER MATCHES ENDS */}
+      {/* DINDER STATS + USER MATCHES ENDS */}
 
-            {/* FOOTER */}
+      {/* FOOTER */}
 
             <Footer />
       </ Container>
