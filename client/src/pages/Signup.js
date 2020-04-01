@@ -17,13 +17,13 @@ function Signup() {
     function handleFormSubmit(event) {
         event.preventDefault();
         console.log("you've reached this point - sign up")
-        {
-            API.saveUser({
+        if (formObject.email && formObject.password) {
+            API.signUpUser({
                 email: formObject.email,
                 password: formObject.password
             })
-                .then(history.push("/home"))
-                .catch(err => console.log(err));
+                .then(function () { history.push("/home") })
+                .catch(err => console.log(err))
         }
     };
 
@@ -55,7 +55,7 @@ function Signup() {
                     <form>
                         <div className="field">
                             <p className="control has-icons-left has-icons-right">
-                                <input onChange={handleInputChange} name="email_input" id="email_input" className="input" type="email" placeholder="Email">
+                                <input onChange={handleInputChange} name="email" id="email_input" className="input" type="email" placeholder="Email">
                                 </input>
                                 <span className="icon is-small is-left">
                                     <i className="fas fa-envelope"></i>
@@ -64,7 +64,7 @@ function Signup() {
                         </div>
                         <div className="field">
                             <p className="control has-icons-left">
-                                <input onChange={handleInputChange} id="password-input" className="input" type="password" placeholder="Password">
+                                <input onChange={handleInputChange} name="password" id="password-input" className="input" type="password" placeholder="Password">
                                 </input>
                                 <span className="icon is-small is-left">
                                     <i className="fas fa-lock"></i>
@@ -82,7 +82,7 @@ function Signup() {
                     <p>Already have an account? Login <a href="/">HERE</a></p>
                 </div>
             </section>
-            <div><Card/></div>
+            <div><Card /></div>
         </Container>
     )
 }

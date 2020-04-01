@@ -20,65 +20,68 @@ function Login() {
     function handleFormSubmit(event) {
         event.preventDefault();
 
-        console.log("you got here")
-        API.loginUser({
-            email: formObject.email,
-            password: formObject.password
-        })
-            .then(history.push("/home"))
-            .catch(err => console.log(err));
-    
-};
-function handleInputChange(event) {
-    const { name, value } = event.target;
-    setFormObject({ ...formObject, [name]: value })
-};
-return (
-    <Container fluid>
-        <HeroBody />
-        <section className="section wrapper">
-            <div className="container">
-                <h1 className="title">
-                    Login Form
+        console.log("you got here - login")
+        if (formObject.email && formObject.password) {
+            API.loginUser({
+                email: formObject.email,
+                password: formObject.password
+            })
+                .then(function () { history.push("/home") })
+                .catch(err => console.log(err));
+        }
+    };
+    function handleInputChange(event) {
+        const { name, value } = event.target;
+        setFormObject({ ...formObject, [name]: value })
+        console.log(formObject.email)
+        console.log(formObject.password)
+    };
+    return (
+        <Container fluid>
+            <HeroBody />
+            <section className="section wrapper">
+                <div className="container">
+                    <h1 className="title">
+                        Login Form
                 </h1>
-                <p className="subtitle">
-                Enter email and password below to access <strong>DinDer</strong>.
+                    <p className="subtitle">
+                        Enter email and password below to access <strong>DinDer</strong>.
                 </p>
-                <form>
-                    <div className="field">
-                        <p className="control has-icons-left has-icons-right">
-                            <input onChange={handleInputChange} id="email_input" className="input" type="email" placeholder="Email">
-                            </input>
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-envelope"></i>
-                            </span>
-                        </p>
-                    </div>
-                    <div className="field">
-                        <p className="control has-icons-left">
-                            <input onChange={handleInputChange} id="password-Input" className="input" type="password" placeholder="Password">
-                            </input>
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-lock"></i>
-                            </span>
-                        </p>
-                    </div>
-                    <div className="field">
-                        <p className="control">
-                            <FormBtn id="form_login" onClick={handleFormSubmit}><a href="/home">
-                                Login
+                    <form>
+                        <div className="field">
+                            <p className="control has-icons-left has-icons-right">
+                                <input onChange={handleInputChange} name="email" id="email_input" className="input" type="email" placeholder="Email">
+                                </input>
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-envelope"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div className="field">
+                            <p className="control has-icons-left">
+                                <input onChange={handleInputChange} name="password" id="password-Input" className="input" type="password" placeholder="Password">
+                                </input>
+                                <span className="icon is-small is-left">
+                                    <i className="fas fa-lock"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div className="field">
+                            <p className="control">
+                                <FormBtn id="form_login" onClick={handleFormSubmit}><a href="/home">
+                                    Login
                                     </a>
-                            </FormBtn>
-                        </p>
-                    </div>
-                </form>
-                <p>Don't have an account? Sign up <a href="/signup">HERE</a></p>
-            </div>
-        </section>
-        <div><Card /></div>
+                                </FormBtn>
+                            </p>
+                        </div>
+                    </form>
+                    <p>Don't have an account? Sign up <a href="/signup">HERE</a></p>
+                </div>
+            </section>
+            <div><Card /></div>
 
-    </Container>
-)
+        </Container>
+    )
 }
 
 export default Login;
