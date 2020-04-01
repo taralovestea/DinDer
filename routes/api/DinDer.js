@@ -7,6 +7,7 @@ var router = express.Router();
 // If the user has valid login credentials, send them to the members page.
 // Otherwise the user will be sent an error
 router.post("/api/login", passport.authenticate("local"), function (req, res) {
+  console.log("got to login")
   res.json(req.user);
 });
 
@@ -18,7 +19,7 @@ router.post("/api/signup", function (req, res) {
     email: req.body.email,
     password: req.body.password
   })
-    .then(function () {
+    .then(function (req) {
       res.redirect(307, "/api/login");
     })
     .catch(function (err) {
@@ -63,21 +64,27 @@ router.get("/:table", function (req, res) {
 });
 
 // find one
-router.get("/one/:table", function (req, res) {
-  switch (req.params.table) {
-    case "matches":
-      db.Matches.findOne().then(function (dbMatches) {
-        res.send(dbMatches);
-      });
-      break;
-    case "user":
-      db.User.findOne().then(function (dbUser) {
-        res.send(dbUser);
-      });
-      break;
-  }
-});
+// router.get("/one/:table", function (req, res) {
+//   switch (req.params.table) {
+//     case "matches":
+//       db.Matches.findOne().then(function (dbMatches) {
+//         res.send(dbMatches);
+//       });
+//       break;
+//     case "user":
+//       db.User.findOne().then(function (dbUser) {
+//         res.send(dbUser);
+//       });
+//       break;
+//   }
+// });
 
+router.get("/api/user/:id", function (req, res) {
+
+  db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
+    res.send(dbUser)
+  })
+});
 
 router.post("/:table", function (req, res) {
   switch (req.params.table) {

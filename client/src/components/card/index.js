@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import { Button } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -33,13 +32,13 @@ export default function ImgMediaCard(props) {
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             {/* will be user.bio */}
-              {props.bio}
+            {props.bio}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <button className="button is-small is-warning is-light">
-          button1 
+          button1
         </button>
         <button className="button is-medium is-warning is-light">
           button2
