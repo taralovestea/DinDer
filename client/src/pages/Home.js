@@ -8,7 +8,7 @@ import UserInfo from "../components/userInfo";
 import HomeTitle from "../components/Title";
 import WebStats from "../components/webStats";
 import Footer from "../components/footer";
-
+import UserTile from "../components/Tile";
 function Home() {
   const [user, setUser] = useState({})
 

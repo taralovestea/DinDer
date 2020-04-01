@@ -7,8 +7,6 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 import React, { useState, useEffect } from "react";
 import HeroBody from "../components/heroBody";
 
-import Card from "../components/card";
-
 import { useHistory } from "react-router-dom";
 
 
@@ -78,7 +76,7 @@ function Login() {
                     <p>Don't have an account? Sign up <a href="/signup">HERE</a></p>
                 </div>
             </section>
-            <div><Card /></div>
+            <div></div>
 
         </Container>
     )
