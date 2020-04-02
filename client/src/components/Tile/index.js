@@ -5,8 +5,8 @@ function UserTile(props) {
     <div className="tile is-parent">
       <article className="tile is-child notification has-background-grey-lighter">
 
-        <figure >
-          <img className="is-rounded" id="user_icon" src="../../../public/images/taralovestea.png"></img>
+        <figure className="image is-128x128">
+          <img className="is-rounded" id="user_icon" src="images/taralovestea.png"></img>
         </figure>
 
         <p className="title">taralovestea</p>
