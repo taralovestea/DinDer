@@ -57,15 +57,14 @@ function Home() {
             <article className="tile is-child has-text-centered">
               <br /><br />
               <br /><br />
-              <p className="title"><a className="button is-warning is-outlined is-large">
-                <span class="icon is-medium">
-                  <i class="fas fa-headset fa-8x"></i></span></a></p>
+              <p className="title is-center">
+              <span className="icon is-medium has-text-warning">
+                  <i className="hvr-grow fas fa-headset fa-5x"></i></span></p>
               <br /><br />
               <br /><br />
-              <br /><br />
-              <p className="title is-center"><a className="button is-warning is-outlined is-large">
-                <span class="icon is-medium">
-                  <i class="fas fa-times-circle fa-8x"></i></span></a></p>
+              <p className="title is-center">
+                <span className="icon is-medium has-text-warning">
+                  <i className="hvr-grow fas fa-times-circle fa-5x"></i></span></p>
             </article>
           </div>
 
