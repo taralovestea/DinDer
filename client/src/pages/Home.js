@@ -16,9 +16,17 @@ function Home() {
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   const { id } = useParams()
   useEffect(() => {
-    API.getUser(id)
-      .then(res => setUser(res.data))
-      .catch(err => console.log(err));
+    // API.getUser(id)
+    //   .then((res) => {
+    //     setUser(res.data)
+    //     console.log("*********************************")
+    //     console.log(res)
+    //   })
+    //   .catch(err => console.log(err));
+    API.checkUserLogged()
+      .then((user) => {
+        setUser(user.data);
+      })
   }, [])
 
   return (
@@ -39,52 +47,34 @@ function Home() {
 
       <HomeTitle />
       <br /><br />
-      <section className="section">
+      <section class="section">
         <div className="tile is-ancestor">
-          <div className="tile is-parent">
-            <article className="tile is-child notification has-background-grey-lighter">
-              <figure className="image is-128x128">
-                <img className="is-rounded" id="user_icon" src="https://bulma.io/images/placeholders/128x128.png"></img>
-              </figure>
 
-              <p className="title">taralovestea</p>
-              <p className="subtitle">What is up?</p>
-              <p> <b>Stats:</b></p>
-            </article>
-          </div>
+          <UserTile>
 
+          </UserTile>
           <div className="tile is-parent">
             <article className="tile is-child has-text-centered">
+              <br /><br />
+              <br /><br />
               <p className="title"><a className="button is-warning is-outlined is-large">
-                {/* <span style='font-size:50px;'>&#128377;</span> */}
-              </a></p>
-              <p className="subtitle">Lets play!</p>
+                <span class="icon is-medium">
+                  <i class="fas fa-headset fa-8x"></i></span></a></p>
+              <br /><br />
+              <br /><br />
               <br /><br />
               <p className="title is-center"><a className="button is-warning is-outlined is-large">
-                {/* <span style='font-size:50px;'>&#128581;</span> */}
-              </a></p>
-              <p className="subtitle">Hard pass!</p>
+                <span class="icon is-medium">
+                  <i class="fas fa-times-circle fa-8x"></i></span></a></p>
             </article>
-            <div className="tile is-parent">
-              <article className="tile is-child notification has-background-grey-lighter">
-                <figure className="image is-128x128">
-                  <img className="is-rounded" id="user_icon" src="https://bulma.io/images/placeholders/128x128.png"></img>
-                </figure>
-
-                <p className="title">taralovestea</p>
-                <p className="subtitle">What is up?</p>
-                <p> <b>Stats:</b></p>
-              </article>
-            </div>
-
-            <UserTile>
-
-            </UserTile>
-
-
           </div>
+
+          <UserTile>
+
+          </UserTile>
         </div>
       </section>
+
 
       {/* MATCHING ENDS */}
 
@@ -97,7 +87,7 @@ function Home() {
       {/* FOOTER */}
 
       <Footer />
-    </ Container>
+    </ Container >
   )
 };
 

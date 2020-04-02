@@ -42,8 +42,13 @@ router.get("/api/user_data", function (req, res) {
     // Otherwise send back the user's email and id
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
+      id: req.user.id,
       email: req.user.email,
-      id: req.user.id
+      userName: req.user.userName,
+      firstName: req.user.firstName,
+      lastName: req.user.lastName,
+      userBio: req.user.userBio,
+      profilePic: req.user.profilePic,
     });
   }
 });
@@ -82,6 +87,7 @@ router.get("/:table", function (req, res) {
 router.get("/api/user/:id", function (req, res) {
 
   db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
+    console.log(dbUser)
     res.send(dbUser)
   })
 });

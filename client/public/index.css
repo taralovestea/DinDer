@@ -1,0 +1,67 @@
+/* ANIMATION */
+
+.animation {
+    width: 100%;
+    font-weight: 900;
+    padding: 0 0 1px;
+    /* height: 10px; */
+}
+
+.animate {
+    font-size: 80px;
+    margin: 1px 0 0;
+}
+
+@media only screen and (max-width: 500px){
+    .animate {
+        font-size: 60px;
+    }
+ }
+
+ @media only screen and (max-width: 392px){
+    .animate {
+        font-size: 50px;
+    }
+ }
+
+ @media only screen and (max-width: 336px){
+    .animate {
+        font-size: 40px;
+    }
+ }
+
+
+.animate span {
+    display: inline-block;
+}
+
+/* Animation Seven */
+.seven span {
+    color: #ffffff;
+    opacity: 0;
+    transform: translate(-150px, 0) scale(.3);
+    animation: leftRight .5s forwards;
+}
+
+
+@keyframes leftRight {
+    40% {
+        transform: translate(50px, 0) scale(.7);
+        opacity: 1;
+        color: #ffffff;
+    }
+
+    60% {
+        color: #0f40ba;
+    }
+
+    80% {
+        transform: translate(0) scale(2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0) scale(1);
+        opacity: 1;
+    }
+}

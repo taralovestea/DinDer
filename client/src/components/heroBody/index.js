@@ -10,7 +10,7 @@ return  <div className="hero is-warning is-bold">
             <span>d</span><span>i</span><span>n</span><span>D</span><span>e</span><span>r</span>
 
             <h2 className="subtitle">
-                Your personalized private note-taker!
+                {/* Headline about DnD  */}
         </h2>
         </div>
     </div>
