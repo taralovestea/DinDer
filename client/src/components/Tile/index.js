@@ -9,13 +9,14 @@ function UserTile(props) {
           <img className="is-rounded" id="user_icon" src="images/taralovestea.png"></img>
         </figure>
 
-        <p className="title">taralovestea</p>
-        <p className="subtitle">What is up?</p>
-        <p> <b>Stats:</b></p>
-        Dedication Level: <i className="fas fa-award"></i><br />
-        Dungeon Master: YES<br />
-        Campaign(s): Curse of Strahd, Dragon Heist, out of the abyss, Storm King's Thunder, Ghosts of Saltmarsh, Dungeon of the Mad Mage, Princes of the Apocalypse, Lost mine of Phandelver<br />
-        Experience: 5 years 2 months <br />
+uploadImg
+          <p className="title">{props.name}</p>
+          <p className="subtitle">{props.header}</p>
+          <p> <b>Stats:</b></p>
+        <p>Dedication Level: <i className="fas fa-award"></i>{props.dedication}</p>
+        Dungeon Master: {props.isMaster} <br/>
+        Campaign(s): {props.campaigns} <br/>
+        Experience: {props.experience} <br/>
 
       </article>
     </div>

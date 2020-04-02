@@ -6,7 +6,7 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import React, { useState, useEffect } from "react";
 import HeroBody from "../components/heroBody";
-
+import ImageUpload from '../components/ImageUpload'
 import { useHistory } from "react-router-dom";
 
 
@@ -77,8 +77,10 @@ function Login() {
                 </div>
             </section>
             <div></div>
-
+            <ImageUpload/>
         </Container>
+
+
     )
 }
 
