@@ -5,15 +5,18 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import React, { useState, useEffect } from "react";
-import Card from "../components/card";
+import Tile from "../components/Tile";
 
 function updateUser() {
     
     
     state = {
         name: loadUser(),
-        src: "",
-        bio: ""
+        header: "",
+        dedication: "",
+        isMaster: false,
+        campaign: "",
+        experience: ""
     };
 
     useEffect(() => {
@@ -48,13 +51,15 @@ function updateUser() {
     };
     return (
         <Container fluid>
-            <Card
-                bio={this.state.bio}
+            <Tile
                 name={this.state.name}
-                src={this.state.src}
-
-            >
-            </Card>
+                header={this.state.header}
+                dedication={this.state.dedication}
+                isMaster={this.state.isMaster}
+                campaign={this.state.campaign}
+                experience={this.state.experience}
+            />
+            
             <div className="update-input">
                 <input onChange={handleInputChange} name="name" type="name" className="input">
                 </input>

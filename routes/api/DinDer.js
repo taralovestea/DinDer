@@ -110,4 +110,20 @@ router.post("/:table", function (req, res) {
 
 });
 
+router.put("/:id", function(req, res){
+  db.User.findOne({
+    id: req.params.id
+  })
+  .then(User => {
+    User.updateAttributes({
+      userName: req.body.userName,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      userBio: req.body.userBio,
+      profilePic: req.body.profilePic
+    });
+    console.log("succesful update!")
+  });
+})
+
 module.exports = router;

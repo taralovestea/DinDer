@@ -14,7 +14,8 @@ module.exports = function (sequelize, DataTypes) {
     },
     userName: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
+      unique: true
     },
     firstName: {
       type: DataTypes.STRING,
@@ -30,7 +31,8 @@ module.exports = function (sequelize, DataTypes) {
     },
     profilePic: {
       type: DataTypes.TEXT,
-      allowNull: true
+      allowNull: true,
+      unique: true
     },
     // The password cannot be null
     password: {
