@@ -18,10 +18,9 @@ export default {
   },
   checkUserLogged: function () {
     return axios.get("/api/user_data");
+  },
+  updateUser: function () {
+    return axios.put("/:id");
   }
-  // // Deletes the book with the given id
-  // deleteBook: function(id) {
-  //   return axios.delete("/api/books/" + id);
-  // },
-
+ 
 };

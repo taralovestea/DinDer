@@ -17,22 +17,30 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: true,
       unique: true
     },
-    firstName: {
+    header: {
       type: DataTypes.STRING,
       allowNull: true
     },
-    lastName: {
-      type: DataTypes.STRING,
+    dedication: {
+      type: DataTypes.INTEGER,
       allowNull: true
     },
-    userBio: {
-      type: DataTypes.TEXT,
+    isMaster: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    campaign:{
+      type: DataTypes.STRING,
       allowNull: true
     },
     profilePic: {
       type: DataTypes.TEXT,
       allowNull: true,
       unique: true
+    },
+    experience: {
+      type: DataTypes.STRING,
+      allowNull: true
     },
     // The password cannot be null
     password: {

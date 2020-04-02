@@ -45,9 +45,11 @@ router.get("/api/user_data", function (req, res) {
       id: req.user.id,
       email: req.user.email,
       userName: req.user.userName,
-      firstName: req.user.firstName,
-      lastName: req.user.lastName,
-      userBio: req.user.userBio,
+      header: req.user.header,
+      dedication: req.user.dedication,
+      isMaster: req.user.isMaster,
+      campaign: req.user.campaign,
+      experience: req.user.experience,
       profilePic: req.user.profilePic,
     });
   }
@@ -68,27 +70,21 @@ router.get("/:table", function (req, res) {
   }
 });
 
-// find one
-// router.get("/one/:table", function (req, res) {
-//   switch (req.params.table) {
-//     case "matches":
-//       db.Matches.findOne().then(function (dbMatches) {
-//         res.send(dbMatches);
-//       });
-//       break;
-//     case "user":
-//       db.User.findOne().then(function (dbUser) {
-//         res.send(dbUser);
-//       });
-//       break;
-//   }
-// });
-
 router.get("/api/user/:id", function (req, res) {
 
   db.User.findOne({ where: { id: req.params.id } }).then(function (dbUser) {
     console.log(dbUser)
-    res.send(dbUser)
+    res.json({
+      id: req.user.id,
+      email: req.user.email,
+      userName: req.user.userName,
+      header: req.user.header,
+      dedication: req.user.dedication,
+      isMaster: req.user.isMaster,
+      campaign: req.user.campaign,
+      experience: req.user.experience,
+      profilePic: req.user.profilePic,
+    });
   })
 });
 
@@ -123,10 +119,12 @@ router.put("/:id", function(req, res){
   .then(User => {
     User.updateAttributes({
       userName: req.body.userName,
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      userBio: req.body.userBio,
-      profilePic: req.body.profilePic
+      header: req.body.header,
+      dedication: req.body.dedication,
+      isMaster: req.body.isMaster,
+      campaign: req.body.campaign,
+      experience: req.body.experience,
+      profilePic: req.body.profilePic,
     });
     console.log("succesful update!")
   });
