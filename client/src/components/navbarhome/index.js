@@ -18,7 +18,7 @@ return <nav className="navbar" role="navigation" aria-label="main navigation">
             </a>
 
       <a className="navbar-item">
-        Documentation
+        Matches
             </a>
 
       <div className="navbar-item has-dropdown is-hoverable">
