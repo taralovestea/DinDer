@@ -16,9 +16,17 @@ function Home() {
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   const { id } = useParams()
   useEffect(() => {
-    API.getUser(id)
-      .then(res => setUser(res.data))
-      .catch(err => console.log(err));
+    // API.getUser(id)
+    //   .then((res) => {
+    //     setUser(res.data)
+    //     console.log("*********************************")
+    //     console.log(res)
+    //   })
+    //   .catch(err => console.log(err));
+    API.checkUserLogged()
+      .then((user) => {
+        setUser(user.data);
+      })
   }, [])
 
   return (
@@ -46,7 +54,7 @@ function Home() {
               <figure className="image is-128x128">
                 <img className="is-rounded" id="user_icon" src="https://bulma.io/images/placeholders/128x128.png"></img>
               </figure>
-
+              <h1>user info should be here: {user.email}</h1>
               <p className="title">taralovestea</p>
               <p className="subtitle">What is up?</p>
               <p> <b>Stats:</b></p>
