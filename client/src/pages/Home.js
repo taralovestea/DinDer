@@ -16,9 +16,17 @@ function Home() {
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   const { id } = useParams()
   useEffect(() => {
-    API.getUser(id)
-      .then(res => setUser(res.data))
-      .catch(err => console.log(err));
+    // API.getUser(id)
+    //   .then((res) => {
+    //     setUser(res.data)
+    //     console.log("*********************************")
+    //     console.log(res)
+    //   })
+    //   .catch(err => console.log(err));
+    API.checkUserLogged()
+      .then((user) => {
+        setUser(user.data);
+      })
   }, [])
 
   return (
