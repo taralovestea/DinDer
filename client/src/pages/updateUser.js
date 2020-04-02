@@ -3,7 +3,6 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
-import { Input, TextArea, FormBtn } from "../components/Form";
 import React, { useState, useEffect } from "react";
 import Tile from "../components/Tile";
 
@@ -11,7 +10,7 @@ function updateUser() {
     
     
     state = {
-        name: loadUser(),
+        userName: loadUser(),
         header: "",
         dedication: "",
         isMaster: false,
@@ -51,8 +50,8 @@ function updateUser() {
     };
     return (
         <Container fluid>
-            <Tile
-                name={this.state.name}
+            <Tile id=""
+                userName={this.state.name}
                 header={this.state.header}
                 dedication={this.state.dedication}
                 isMaster={this.state.isMaster}
@@ -61,7 +60,27 @@ function updateUser() {
             />
             
             <div className="update-input">
-                <input onChange={handleInputChange} name="name" type="name" className="input">
+                <input onChange={handleInputChange} name="userName" type="name" className="input">
+                </input>
+            </div>
+            <div className="update-input">
+                <input onChange={handleInputChange} name="header" type="name" className="input">
+                </input>
+            </div>
+            <div className="update-input">
+                <input onChange={handleInputChange} name="dedication" type="name" className="input">
+                </input>
+            </div>
+            <div className="update-input">
+                <input onChange={handleInputChange} name="isMaster" type="name" className="input">
+                </input>
+            </div>
+            <div className="update-input">
+                <input onChange={handleInputChange} name="campaign" type="name" className="input">
+                </input>
+            </div>
+            <div className="update-input">
+                <input onChange={handleInputChange} name="experience" type="name" className="input">
                 </input>
             </div>
 

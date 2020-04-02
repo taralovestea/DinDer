@@ -8,7 +8,7 @@ function UserTile(props) {
         <figure className="image is-128x128">
           <img className="is-rounded" id="user_icon" src={props.profilePic}></img>
         </figure>
-        <p className="title">{props.name}</p>
+        <p className="title">{props.userName}</p>
         <p className="subtitle">{props.header}</p>
         <p> <b>Stats:</b></p>
         <p>Dedication Level: <i className="fas fa-award"></i>{props.dedication}</p>
