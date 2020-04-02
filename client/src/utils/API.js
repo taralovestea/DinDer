@@ -22,5 +22,4 @@ export default {
   updateUser: function () {
     return axios.put("/:id");
   }
- 
 };

@@ -29,12 +29,12 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     },
-    campaign:{
+    campaign: {
       type: DataTypes.STRING,
       allowNull: true
     },
     profilePic: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: true,
       unique: true
     },
