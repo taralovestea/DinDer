@@ -112,12 +112,10 @@ router.post("/:table", function (req, res) {
 
 });
 
-router.put("/:id", function(req, res){
-  db.User.findOne({
-    id: req.params.id
-  })
-  .then(User => {
-    User.updateAttributes({
+router.put("/api/update_user", function(req, res){
+  console.log(req.user)
+  db.User.update(
+    {
       userName: req.body.userName,
       header: req.body.header,
       dedication: req.body.dedication,
@@ -125,8 +123,14 @@ router.put("/:id", function(req, res){
       campaign: req.body.campaign,
       experience: req.body.experience,
       profilePic: req.body.profilePic,
-    });
-    console.log("succesful update!")
+    },
+    {
+    where : {id : req.user.id}
+    }
+  )
+  .then(res => {
+    
+    console.log("succesful update!", res)
   });
 })
 
