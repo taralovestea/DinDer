@@ -14,29 +14,8 @@ return <nav className="navbar" role="navigation" aria-label="main navigation">
   <div id="navbarBasicExample" className="navbar-menu">
     <div className="navbar-start">
       <a className="navbar-item">
-        Home
+        Welcome <h1 user={userName}></h1>
             </a>
-
-      <a className="navbar-item">
-        Matches
-            </a>
-
-      <div className="navbar-item has-dropdown is-hoverable">
-        <a className="navbar-link">
-          More
-                </a>
-
-        <div className="navbar-dropdown">
-          <a className="navbar-item">
-            About
-                    </a>
-          <a className="navbar-item">
-            Jobs
-                    </a>
-          <a className="navbar-item">
-            Contact
-                    </a>
-        </div>
       </div>
     </div>
 
@@ -48,10 +27,8 @@ return <nav className="navbar" role="navigation" aria-label="main navigation">
                     </a>
         </div>
       </div>
-    </div>
   </div>
 </nav>
-
 }
 
 export default navBarHome;

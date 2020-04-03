@@ -50,9 +50,10 @@ function Home() {
       <section class="section">
         <div className="tile is-ancestor">
 
-          <UserTile>
+          <UserTile user={user}>
 
           </UserTile>
+
           <div className="tile is-parent">
             <article className="tile is-child has-text-centered">
               <br /><br />
@@ -68,7 +69,7 @@ function Home() {
             </article>
           </div>
 
-          <UserTile>
+          <UserTile user={user}>
 
           </UserTile>
         </div>
