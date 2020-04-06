@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import storage from "../Firebase/index";
+import API from "../../utils/API";
 
 class ImageUpload extends Component {
   constructor(props) {
@@ -42,6 +43,12 @@ class ImageUpload extends Component {
           .getDownloadURL()
           .then(url => {
             this.setState({ url });
+            API.updateUser({
+              profilePic: {url}
+            }
+          ).then(res => {
+              console.log("RESPONSE", res)
+          })
           });
       }
     );
@@ -49,10 +56,10 @@ class ImageUpload extends Component {
   render() {
     return (
       <div className="center">
-          <br/>
-          <h2 className="green-text">React Firebase Image Uploader</h2>
-          <br/>
-          <br/>
+        <br />
+        <h2 className="green-text">React Firebase Image Uploader</h2>
+        <br />
+        <br />
         <div className="row">
           <progress value={this.state.progress} max="100" className="progress" />
         </div>
@@ -76,6 +83,7 @@ class ImageUpload extends Component {
         </button>
         <br />
         <br />
+        <div id="pictureURL">{this.state.url}</div>
         <img
           src={this.state.url || "https://via.placeholder.com/400x300"}
           alt="Uploaded Images"

@@ -5,6 +5,7 @@ import NoMatch from "./pages/NoMatch";
 // import Nav from "./components/Nav";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Profile from "./pages/updateUser"
 
 
 function App() {
@@ -14,13 +15,16 @@ function App() {
         {/* <Nav /> */}
         <Switch>
           <Route exact path={"/"}>
-            <Login />
+            <Login/>
           </Route>
           <Route exact path={"/signup"}>
             <Signup />
           </Route>
           <Route exact path={"/home"}>
             <Home />
+          </Route>
+          <Route exact path={"/profile"}>
+            <Profile/>
           </Route>
           <Route>
             <NoMatch />

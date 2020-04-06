@@ -19,7 +19,7 @@ export default {
   checkUserLogged: function () {
     return axios.get("/api/user_data");
   },
-  updateUser: function () {
-    return axios.put("/:id");
+  updateUser: function (userData) {
+    return axios.put("/api/update_user", userData);
   }
 };
