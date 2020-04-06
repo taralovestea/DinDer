@@ -12,7 +12,7 @@ function UserTile(props) {
         <p>Dedication Level: <i className="fas fa-award"></i>{props.dedication}</p>
         Dungeon Master: {props.isMaster} <br />
         Campaign(s): {props.campaigns} <br />
-        Experience: {props.experience} <br />
+        Experience: {props.experience} <br/>
 
       </article>
     </div>
