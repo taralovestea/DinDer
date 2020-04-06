@@ -13,7 +13,13 @@ import { useHistory } from "react-router-dom";
 function Login() {
     const [formObject, setFormObject] = useState({})
     const history = useHistory();
-
+    useEffect(() => {
+        API.checkUserLogged()
+            .then((user) => {
+                if (user.data.id)
+                    history.push("/home");
+            })
+    }, [])
 
     function handleFormSubmit(event) {
         event.preventDefault();
@@ -77,7 +83,7 @@ function Login() {
                 </div>
             </section>
             <div></div>
-            <ImageUpload/>
+            <ImageUpload />
         </Container>
 
 
