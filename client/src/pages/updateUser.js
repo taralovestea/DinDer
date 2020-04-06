@@ -64,59 +64,59 @@ function updateUser() {
                     <div className="update-input">
                         Header
                 <input onChange={handleInputChange} name="header" type="header" className="input">
-                </input>
-            </div>
-            <div className="update-input">
-                dedication lvl
+                        </input>
+                    </div>
+                    <div className="update-input">
+                        dedication lvl
                 <select onChange={handleInputChange} name="dedication" type="dedication">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-            </div>
-            <div className="update-input">
-                isMaster
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div className="update-input">
+                        isMaster
                 <div className="select">
-                    <select onChange={handleInputChange} name="isMaster" type="isMaster">
-                        <option value="0">false</option>
-                        <option value="1">true</option>
-                    </select>
-                </div>
-            </div>
-            <div className="update-input">
-                campaign
+                            <select onChange={handleInputChange} name="isMaster" type="isMaster">
+                                <option value="0">false</option>
+                                <option value="1">true</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className="update-input">
+                        campaign
                 <input onChange={handleInputChange} name="campaign" type="campaign" className="input">
-                </input>
-            </div>
-            <div className="update-input">
-                experience
+                        </input>
+                    </div>
+                    <div className="update-input">
+                        experience
                 <div className="select">
-                    <select onChange={handleInputChange} name="experience" type="experience">
-                        <option>> 1 year</option>
-                        <option>1 year</option>
-                        <option>2 years</option>
-                        <option>3 years</option>
-                        <option>4 years</option>
-                        <option>5 years</option>
-                        <option>6 years</option>
-                        <option>7 years</option>
-                        <option>8 years</option>
-                        <option>9 + years</option>
-                    </select>
-                </div>
-            </div>
-            <div>
-                <ImageUpload></ImageUpload>
-            </div>
-            <button class="button is-warning" onClick={handleFormSubmit}>Warning</button>
-
+                            <select onChange={handleInputChange} name="experience" type="experience">
+                                <option>> 1 year</option>
+                                <option>1 year</option>
+                                <option>2 years</option>
+                                <option>3 years</option>
+                                <option>4 years</option>
+                                <option>5 years</option>
+                                <option>6 years</option>
+                                <option>7 years</option>
+                                <option>8 years</option>
+                                <option>9 + years</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <ImageUpload></ImageUpload>
+                    </div>
+                    <button class="button is-warning" onClick={handleFormSubmit}>Warning</button>
+                </div></section>
 
         </Container >
     )
