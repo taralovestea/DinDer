@@ -46,6 +46,7 @@ function updateUser() {
                 isMaster={user.isMaster}
                 campaign={user.campaign}
                 experience={user.experience}
+                profilePic={user.profilePic}
             />
 
             <div className="update-input">
@@ -79,7 +80,7 @@ function updateUser() {
                 </input>
             </div>
             <div>
-                <ImageUpload onChange={handleInputChange} name="profilePic"></ImageUpload>
+                <ImageUpload></ImageUpload>
             </div>
             <button class="button is-warning" onClick={handleFormSubmit}>Warning</button>
             
