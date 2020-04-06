@@ -9,13 +9,18 @@ import HomeTitle from "../components/Title";
 import WebStats from "../components/webStats";
 import Footer from "../components/footer";
 import UserTile from "../components/Tile";
+import Axios from "axios";
+
 function Home() {
   const [user, setUser] = useState({})
+  const [spell, setSpell] = useState({})
+  
 
   // When this component mounts, grab the book with the _id of props.match.params.id
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   const { id } = useParams()
   useEffect(() => {
+
     // API.getUser(id)
     //   .then((res) => {
     //     setUser(res.data)
@@ -23,6 +28,11 @@ function Home() {
     //     console.log(res)
     //   })
     //   .catch(err => console.log(err));
+
+    Axios.get("https://api.open5e.com/spells/")
+            .then((res) => {setSpell(res.data.results[Math.floor(Math.random() * 50)])})
+          
+            .catch(err => console.log(err));
     API.checkUserLogged()
       .then((user) => {
         setUser(user.data);
@@ -33,7 +43,7 @@ function Home() {
     <Container>
 
       {/* NAV BAR */}
-      <NavBarHome user={user} />
+      <NavBarHome user = {user} />
 
       {/* NAV BAR ENDS */}
 
@@ -45,7 +55,8 @@ function Home() {
 
       {/* MATCHING */}
 
-      <HomeTitle />
+      <HomeTitle spell = {spell} >
+        </HomeTitle>
       <br /><br />
       <section class="section">
         <div className="tile is-ancestor">
