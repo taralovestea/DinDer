@@ -1,6 +1,6 @@
 import React from "react";
 
-function navBarHome() {
+function navBarHome(props) {
 return <nav className="navbar" role="navigation" aria-label="main navigation">
   <div className="navbar-brand">
     <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -14,7 +14,7 @@ return <nav className="navbar" role="navigation" aria-label="main navigation">
   <div id="navbarBasicExample" className="navbar-menu">
     <div className="navbar-start">
       <a className="navbar-item">
-        Welcome <h1>{user.userName}</h1>
+        Welcome <h1>{props.user.userName}</h1>
             </a>
       </div>
     </div>
