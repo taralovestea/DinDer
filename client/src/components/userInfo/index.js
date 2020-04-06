@@ -21,9 +21,7 @@ return <section className="hero is-warning is-bold">
         </div>
       </div>
     </div>
-  </div>
-</div>
-</section>
+  </section>
 }
 
 export default userInfo; 

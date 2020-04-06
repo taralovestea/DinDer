@@ -10,24 +10,25 @@ import WebStats from "../components/webStats";
 import Footer from "../components/footer";
 import UserTile from "../components/Tile";
 import Axios from "axios";
+import { useHistory } from "react-router-dom";
 
 function Home() {
   const [user, setUser] = useState({})
   const [spell, setSpell] = useState({})
-  
+  const history = useHistory();  
 
   // When this component mounts, grab the book with the _id of props.match.params.id
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   const { id } = useParams()
   useEffect(() => {
 
-    // API.getUser(id)
-    //   .then((res) => {
-    //     setUser(res.data)
-    //     console.log("*********************************")
-    //     console.log(res)
-    //   })
-    //   .catch(err => console.log(err));
+  //   API.checkUserLogged()
+  //     .then((user) => {
+  //       if (user.data.id)
+  //         setUser(user.data);
+  //       else
+  //         history.push("/")
+  //     })
 
     Axios.get("https://api.open5e.com/spells/")
             .then((res) => {setSpell(res.data.results[Math.floor(Math.random() * 50)])})
@@ -61,7 +62,9 @@ function Home() {
       <section class="section">
         <div className="tile is-ancestor">
 
+
           <UserTile user={user}>
+
 
           </UserTile>
 

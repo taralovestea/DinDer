@@ -10,9 +10,16 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 function Signup() {
-    var currentUser;
     const history = useHistory();
     const [formObject, setFormObject] = useState({})
+
+    useEffect(() => {
+        API.checkUserLogged()
+            .then((user) => {
+                if (user.data.id)
+                    history.push("/home");
+            })
+    }, [])
 
     function handleFormSubmit(event) {
         event.preventDefault();

@@ -1,10 +1,15 @@
-import React, { Component } from "react";
+import React, {useState, useEffect, Component } from "react";
+
 import storage from "../Firebase/index";
 import API from "../../utils/API";
 
 class ImageUpload extends Component {
+
+    // need utils/api to be done, then change
+    
   constructor(props) {
     super(props);
+    
     this.state = {
       image: null,
       url: "",
@@ -44,11 +49,12 @@ class ImageUpload extends Component {
           .then(url => {
             this.setState({ url });
             API.updateUser({
-              profilePic: { url }
+              profilePic: url
             }
-            ).then(res => {
-              console.log("RESPONSE", res)
-            })
+          ).then(res => {
+            console.log(this.state.url)
+              console.log("RESPONSE is ok", res)
+          })
           });
       }
     );
