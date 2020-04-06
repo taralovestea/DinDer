@@ -83,7 +83,6 @@ function Login() {
                 </div>
             </section>
             <div></div>
-            <ImageUpload />
         </Container>
 
 

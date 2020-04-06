@@ -6,6 +6,9 @@ import { List, ListItem } from "../components/List";
 import React, { useState, useEffect, Component } from "react";
 import Tile from "../components/Tile";
 import ImageUpload from "../components/ImageUpload"
+import NavBarHome from "../components/navbarhome"
+import userInfo from "../components/userInfo"
+import Footer from "../components/footer"
 
 function updateUser() {
     const [user, setUser] = useState({})
@@ -39,6 +42,9 @@ function updateUser() {
 
     return (
         <Container fluid>
+            <NavBarHome user={user} />
+            <userInfo user={user} />
+
             <Tile id="profileTile"
                 userName={user.userName}
                 header={user.header}
@@ -48,14 +54,15 @@ function updateUser() {
                 experience={user.experience}
                 profilePic={user.profilePic}
             />
-
-            <div className="update-input">
-                Username
+            <section class="section">
+                <div className="field">
+                    <div className="label update-input">
+                        Username
                 <input onChange={handleInputChange} name="userName" type="userName" className="input">
-                </input>
-            </div>
-            <div className="update-input">
-                header
+                        </input>
+                    </div>
+                    <div className="update-input">
+                        Header
                 <input onChange={handleInputChange} name="header" type="header" className="input">
                 </input>
             </div>
