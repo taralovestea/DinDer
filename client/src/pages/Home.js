@@ -9,25 +9,24 @@ import HomeTitle from "../components/Title";
 import WebStats from "../components/webStats";
 import Footer from "../components/footer";
 import UserTile from "../components/Tile";
+
+import { useHistory } from "react-router-dom";
 function Home() {
   const [user, setUser] = useState({})
-
+  const history = useHistory();
   // When this component mounts, grab the book with the _id of props.match.params.id
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   const { id } = useParams()
-  useEffect(() => {
-    // API.getUser(id)
-    //   .then((res) => {
-    //     setUser(res.data)
-    //     console.log("*********************************")
-    //     console.log(res)
-    //   })
-    //   .catch(err => console.log(err));
-    API.checkUserLogged()
-      .then((user) => {
-        setUser(user.data);
-      })
-  }, [])
+
+  // useEffect(() => {
+  //   API.checkUserLogged()
+  //     .then((user) => {
+  //       if (user.data.id)
+  //         setUser(user.data);
+  //       else
+  //         history.push("/")
+  //     })
+  // }, [])
 
   return (
     <Container>
@@ -50,7 +49,7 @@ function Home() {
       <section class="section">
         <div className="tile is-ancestor">
 
-          <UserTile>
+          <UserTile >
 
           </UserTile>
           <div className="tile is-parent">
