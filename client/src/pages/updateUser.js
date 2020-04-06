@@ -118,6 +118,7 @@ function updateUser() {
                     <button class="button is-warning" onClick={handleFormSubmit}>Warning</button>
                 </div>
             </section>
+
         </Container >
     )
 }
