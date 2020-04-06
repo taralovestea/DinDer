@@ -116,7 +116,8 @@ function updateUser() {
                         <ImageUpload></ImageUpload>
                     </div>
                     <button class="button is-warning" onClick={handleFormSubmit}>Warning</button>
-                </div></section>
+                </div>
+            </section>
 
         </Container >
     )
