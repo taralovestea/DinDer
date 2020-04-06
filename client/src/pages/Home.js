@@ -9,16 +9,19 @@ import HomeTitle from "../components/Title";
 import WebStats from "../components/webStats";
 import Footer from "../components/footer";
 import UserTile from "../components/Tile";
-
+import Axios from "axios";
 import { useHistory } from "react-router-dom";
+
 function Home() {
   const [user, setUser] = useState({})
-  const history = useHistory();
+  const [spell, setSpell] = useState({})
+  const history = useHistory();  
+
   // When this component mounts, grab the book with the _id of props.match.params.id
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   const { id } = useParams()
+  useEffect(() => {
 
-  // useEffect(() => {
   //   API.checkUserLogged()
   //     .then((user) => {
   //       if (user.data.id)
@@ -26,13 +29,22 @@ function Home() {
   //       else
   //         history.push("/")
   //     })
-  // }, [])
+
+    Axios.get("https://api.open5e.com/spells/")
+            .then((res) => {setSpell(res.data.results[Math.floor(Math.random() * 50)])})
+          
+            .catch(err => console.log(err));
+    API.checkUserLogged()
+      .then((user) => {
+        setUser(user.data);
+      })
+  }, [])
 
   return (
     <Container>
 
       {/* NAV BAR */}
-      <NavBarHome />
+      <NavBarHome user = {user} />
 
       {/* NAV BAR ENDS */}
 
@@ -44,31 +56,34 @@ function Home() {
 
       {/* MATCHING */}
 
-      <HomeTitle />
+      <HomeTitle spell = {spell} >
+        </HomeTitle>
       <br /><br />
       <section class="section">
         <div className="tile is-ancestor">
 
-          <UserTile >
+
+          <UserTile user={user}>
+
 
           </UserTile>
+
           <div className="tile is-parent">
             <article className="tile is-child has-text-centered">
               <br /><br />
               <br /><br />
-              <p className="title"><a className="button is-warning is-outlined is-large">
-                <span class="icon is-medium">
-                  <i class="fas fa-headset fa-8x"></i></span></a></p>
+              <p className="title is-center">
+              <span className="icon is-medium has-text-warning">
+                  <i className="hvr-grow fas fa-headset fa-5x"></i></span></p>
               <br /><br />
               <br /><br />
-              <br /><br />
-              <p className="title is-center"><a className="button is-warning is-outlined is-large">
-                <span class="icon is-medium">
-                  <i class="fas fa-times-circle fa-8x"></i></span></a></p>
+              <p className="title is-center">
+                <span className="icon is-medium has-text-warning">
+                  <i className="hvr-grow fas fa-times-circle fa-5x"></i></span></p>
             </article>
           </div>
 
-          <UserTile>
+          <UserTile user={user}>
 
           </UserTile>
         </div>

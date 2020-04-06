@@ -9,6 +9,9 @@ return <section className="hero is-warning is-bold">
         <img className="is-rounded" id="user_icon" src="images/taralovestea.png"></img>
       </figure>
     </div>
+    <div>
+      <h1><a href="/">Edit Profile</a></h1>
+    </div>
     <div className="column is-four-fifths">
       <div className="container">
         <div className="container animation">
