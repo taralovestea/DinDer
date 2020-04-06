@@ -33,6 +33,7 @@ router.get("/logout", function (req, res) {
   res.redirect("/");
 });
 
+
 // Route for getting some data about our user to be used client side
 router.get("/api/user_data", function (req, res) {
   if (!req.user) {
