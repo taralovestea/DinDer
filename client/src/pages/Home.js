@@ -33,7 +33,7 @@ function Home() {
     <Container>
 
       {/* NAV BAR */}
-      <NavBarHome />
+      <NavBarHome user={user} />
 
       {/* NAV BAR ENDS */}
 
