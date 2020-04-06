@@ -3,6 +3,7 @@ var session = require("express-session");
 var passport = require("./configs/passport");
 require("dotenv").config();
 const routes = require("./routes");
+const path = require("path");
 
 var db = require("./models")
 const PORT = process.env.PORT || 3001;
