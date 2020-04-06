@@ -109,7 +109,6 @@ function updateUser() {
                             <label className="label update-input">
                                 Experience</label>
                             <div className="control">
-
                                 <div className="select">
                                     <select onChange={handleInputChange} name="experience" type="experience">
                                         <option>> 1 year</option>
@@ -130,7 +129,7 @@ function updateUser() {
                     <div>
                         <ImageUpload></ImageUpload>
                     </div>
-                    <button class="button is-warning" onClick={handleFormSubmit}>Warning</button>
+                    <button class="button is-warning" onClick={handleFormSubmit}>Submit</button>
                 </div>
             </section>
 
