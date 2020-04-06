@@ -5,7 +5,7 @@ function userInfo() {
     <div className="hero-body">
       <div className="columns is-mobile ">
         <div className="column is-one-fifth">
-          <button className="button is-warning" href="/profile">Edit Profile</button>
+          <a className="button is-warning" href="/profile">Edit Profile</a>
         </div>
         <div className="column is-four-fifths">
           <div className="container">
