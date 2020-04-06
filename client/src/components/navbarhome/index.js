@@ -16,41 +16,21 @@ return <nav className="navbar" role="navigation" aria-label="main navigation">
         Welcome <h1>{props.user.userName}</h1>
             </a>
         <a className="navbar-item">
-        <Link to ='/profile' >Profile</Link> 
+        {/* <Link to ='/profile' >Profile</Link>  */}
             </a>
 
-        <div className="navbar-item has-dropdown is-hoverable">
-          <a className="navbar-link">
-            More
-                </a>
-
-          <div className="navbar-dropdown">
-            <a className="navbar-item">
-              About
-                    </a>
-            <a className="navbar-item">
-              Jobs
-                    </a>
-            <a className="navbar-item">
-              Contact
-                    </a>
-          </div>
         </div>
       </div>
 
       <div className="navbar-end">
         <div className="navbar-item">
           <div className="buttons">
-            <a className="button is-warning">
-              <strong>Sign up</strong>
-            </a>
             <a className="button is-light">
-              Log in
+              Log Out
                     </a>
           </div>
         </div>
       </div>
-    </div>
   </nav>
 
 }
