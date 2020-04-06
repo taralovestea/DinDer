@@ -11,13 +11,6 @@ function navBarHome() {
       </a>
     </div>
 
-<<<<<<< Updated upstream
-  <div id="navbarBasicExample" className="navbar-menu">
-    <div className="navbar-start">
-      <a className="navbar-item">
-        Welcome <h1>{user.userName}</h1>
-            </a>
-=======
     <div id="navbarBasicExample" className="navbar-menu">
       <div className="navbar-start">
         <a className="navbar-item">
@@ -48,16 +41,8 @@ function navBarHome() {
                     </a>
           </div>
         </div>
->>>>>>> Stashed changes
       </div>
 
-<<<<<<< Updated upstream
-    <div className="navbar-end">
-      <div className="navbar-item">
-        <div className="buttons">
-          <a className="button is-light">
-            Log out
-=======
       <div className="navbar-end">
         <div className="navbar-item">
           <div className="buttons">
@@ -66,19 +51,13 @@ function navBarHome() {
             </a>
             <a className="button is-light">
               Log in
->>>>>>> Stashed changes
                     </a>
           </div>
         </div>
       </div>
-<<<<<<< Updated upstream
-  </div>
-</nav>
-=======
     </div>
   </nav>
 
->>>>>>> Stashed changes
 }
 
 export default navBarHome;

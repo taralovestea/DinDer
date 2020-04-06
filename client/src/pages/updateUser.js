@@ -5,6 +5,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import React, { useState, useEffect, Component } from "react";
 import Tile from "../components/Tile";
+import ImageUpload from "../components/ImageUpload"
 
 function updateUser() {
     const [user, setUser] = useState({})
@@ -77,7 +78,11 @@ function updateUser() {
                 <input onChange={handleInputChange} name="experience" type="experience" className="input">
                 </input>
             </div>
+            <div>
+                <ImageUpload onChange={handleInputChange} name="profilePic"></ImageUpload>
+            </div>
             <button class="button is-warning" onClick={handleFormSubmit}>Warning</button>
+            
 
         </Container>
     )
