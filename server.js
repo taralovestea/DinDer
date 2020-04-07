@@ -1,5 +1,5 @@
 const express = require("express");
-var session = require("cookie-session");
+var session = require("express-session");
 var passport = require("./config/passport");
 require("dotenv").config();
 const routes = require("./routes");
