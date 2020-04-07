@@ -1,6 +1,10 @@
 import axios from "axios";
 
 export default {
+  //Gets every user 
+  getAllUsers: function () {
+    return axios.get("/api/users")
+  },
   // Saves a user to the database
   saveUser: function (userData) {
     return axios.post("/api/user", userData);

@@ -13,6 +13,7 @@ import { useHistory } from "react-router-dom";
 function Login() {
     const [formObject, setFormObject] = useState({})
     const history = useHistory();
+
     useEffect(() => {
         API.checkUserLogged()
             .then((user) => {
