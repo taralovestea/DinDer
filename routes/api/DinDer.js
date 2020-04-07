@@ -89,6 +89,13 @@ router.get("/api/user/:id", function (req, res) {
   })
 });
 
+router.get("/api/users", function (req, res) {
+  db.User.findAll({}).then(function (dbUsers) {
+    console.log(dbUsers)
+    res.json({ dbUsers });
+  })
+});
+
 router.post("/:table", function (req, res) {
   switch (req.params.table) {
     case "user":
@@ -113,7 +120,7 @@ router.post("/:table", function (req, res) {
 
 });
 
-router.put("/api/update_user", function(req, res){
+router.put("/api/update_user", function (req, res) {
   console.log(req.user)
   db.User.update(
     {
@@ -126,13 +133,13 @@ router.put("/api/update_user", function(req, res){
       profilePic: req.body.profilePic,
     },
     {
-    where : {id : req.user.id}
+      where: { id: req.user.id }
     }
   )
-  .then(res => {
-    
-    console.log("succesful update!", res)
-  });
+    .then(res => {
+
+      console.log("succesful update!", res)
+    });
 })
 
 module.exports = router;

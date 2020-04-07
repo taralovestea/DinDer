@@ -13,30 +13,36 @@ import Axios from "axios";
 import { useHistory } from "react-router-dom";
 
 function Home() {
+  const [randUser, setRandUser] = useState({})
   const [user, setUser] = useState({})
   const [spell, setSpell] = useState({})
-  const history = useHistory();  
+  const history = useHistory();
 
   // When this component mounts, grab the book with the _id of props.match.params.id
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   const { id } = useParams()
   useEffect(() => {
 
-  //   API.checkUserLogged()
-  //     .then((user) => {
-  //       if (user.data.id)
-  //         setUser(user.data);
-  //       else
-  //         history.push("/")
-  //     })
+    API.checkUserLogged()
+      .then((user) => {
+        if (user.data.id)
+          setUser(user.data);
+        else
+          history.push("/")
+      })
 
     Axios.get("https://api.open5e.com/spells/")
-            .then((res) => {setSpell(res.data.results[Math.floor(Math.random() * 50)])})
-          
-            .catch(err => console.log(err));
+      .then((res) => { setSpell(res.data.results[Math.floor(Math.random() * 50)]) })
+
+      .catch(err => console.log(err));
     API.checkUserLogged()
       .then((user) => {
         setUser(user.data);
+      })
+    API.getAllUsers()
+      .then((dbusers) => {
+        let length = dbusers.data.dbUsers.length
+        setRandUser(dbusers.data.dbUsers[Math.floor(Math.random() * length)])
       })
   }, [])
 
@@ -44,7 +50,7 @@ function Home() {
     <Container>
 
       {/* NAV BAR */}
-      <NavBarHome user = {user} />
+      <NavBarHome user={user} />
 
       {/* NAV BAR ENDS */}
 
@@ -56,14 +62,14 @@ function Home() {
 
       {/* MATCHING */}
 
-      <HomeTitle spell = {spell} >
-        </HomeTitle>
+      <HomeTitle spell={spell} >
+      </HomeTitle>
       <br /><br />
       <section class="section">
         <div className="tile is-ancestor">
 
 
-          <UserTile user={user}>
+          <UserTile profilePic={user.profilePic} userName={user.userName} header={user.header} dedication={user.dedication} isMaster={user.isMaster} campaign={user.campaign} experience={user.experience}>
 
 
           </UserTile>
@@ -73,7 +79,7 @@ function Home() {
               <br /><br />
               <br /><br />
               <p className="title is-center">
-              <span className="icon is-medium has-text-warning">
+                <span className="icon is-medium has-text-warning">
                   <i className="hvr-grow fas fa-headset fa-5x"></i></span></p>
               <br /><br />
               <br /><br />
@@ -82,8 +88,11 @@ function Home() {
                   <i className="hvr-grow fas fa-times-circle fa-5x"></i></span></p>
             </article>
           </div>
-
-          <UserTile user={user}>
+          {
+            (user.id == randUser.id) ?
+              (<p>Match with yourself!</p>) : (<p></p>)
+          }
+          <UserTile profilePic={randUser.profilePic} userName={randUser.userName} header={randUser.header} dedication={randUser.dedication} isMaster={randUser.isMaster} campaign={randUser.campaign} experience={randUser.experience}>
 
           </UserTile>
         </div>
