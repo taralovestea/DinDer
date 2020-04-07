@@ -38,8 +38,6 @@ function Login() {
     function handleInputChange(event) {
         const { name, value } = event.target;
         setFormObject({ ...formObject, [name]: value })
-        console.log(formObject.email)
-        console.log(formObject.password)
     };
     return (
         <Container fluid>
