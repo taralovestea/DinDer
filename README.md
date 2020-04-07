@@ -40,9 +40,6 @@ npm start
 
  - A random DinDer User will populate on the home page for the User to MATCH with by clicking the HEADSET icon or DENY MATCH by clicking the X icon.
 
-![2020-03-06 10 13 10](https://user-images.githubusercontent.com/46901242/76100931-28f1fc00-5f93-11ea-943d-2181c1c713cb.gif)
-
-
 ## Features coming soon
 
 Stats at the bottom with populate with active DinDer user count, how many people have selected to GAME with you, and how many matches you have made.
