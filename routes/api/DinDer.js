@@ -1,6 +1,6 @@
 var express = require("express");
 var db = require("../../models");
-var passport = require("../../configs/passport");
+var passport = require("../../config/passport");
 var router = express.Router();
 
 // Using the passport.authenticate middleware with our local strategy.

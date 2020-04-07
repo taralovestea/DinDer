@@ -76,7 +76,7 @@ function Login() {
                             </p>
                         </div>
                     </form>
-                    <p>Don't have an account? Sign up <Link to="/signup">HERE</Link></p>
+                    <p>Don't have an account? Sign up <Link to = "/signup">HERE </Link></p>
                 </div>
             </section>
             <div></div>

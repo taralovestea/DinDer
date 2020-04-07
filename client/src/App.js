@@ -9,16 +9,7 @@ import API from "./utils/API";
 import Profile from "./pages/updateUser"
 
 function App() {
-  const [user, setUser] = useState({})
 
-  useEffect(() => {
-    API.checkUserLogged()
-      .then((user) => {
-        setUser(user.data);
-        console.log("*" * 80)
-        console.log(user.data)
-      })
-  }, [])
   return (
     <Router>
       <div>

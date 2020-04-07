@@ -16,6 +16,7 @@ function Signup() {
     useEffect(() => {
         API.checkUserLogged()
             .then((user) => {
+                console.log("checked user")
                 if (user.data.id)
                     history.push("/home");
             })
