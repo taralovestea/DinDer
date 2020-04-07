@@ -31,7 +31,8 @@ npm start
 
  - Links to either is at the bottom of the other
 
-< PUT A GIF HERE >
+![2020-04-07 12 20 53](https://user-images.githubusercontent.com/59029999/78699940-4daafd80-78ca-11ea-92b4-7ce4199ea896.gif)
+
 
 ### Members Interaction
  - Once member is signed up or logged in, directed to DinDer home page
