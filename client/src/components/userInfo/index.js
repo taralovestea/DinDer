@@ -1,11 +1,11 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function userInfo() {
   return <section className="hero is-warning is-bold">
     <div className="hero-body">
       <div className="columns is-mobile ">
         <div className="column is-one-fifth">
-          <a className="button is-warning" href="/profile">Edit Profile</a>
+          <Link className="button is-warning" to="/profile">Edit Profile</Link>
         </div>
         <div className="column is-four-fifths">
           <div className="container">
