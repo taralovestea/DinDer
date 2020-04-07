@@ -25,5 +25,8 @@ export default {
   },
   updateUser: function (userData) {
     return axios.put("/api/update_user", userData);
+  },
+  logoutUser: function () {
+    return axios.get("/logout");
   }
 };
