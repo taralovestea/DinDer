@@ -24,17 +24,17 @@ function App() {
       <div>
         {/* <Nav /> */}
         <Switch>
-          <Route exact path={"/"}>
-            <Login/>
-          </Route>
-          <Route exact path={"/signup"}>
+          <Route exact path="/signup">
             <Signup />
           </Route>
-          <Route exact path={"/home"}>
+          <Route exact path="/home">
             <Home />
           </Route>
-          <Route exact path={"/profile"}>
+          <Route exact path="/profile">
             <Profile/>
+          </Route>
+          <Route exact path="/">
+            <Login/>
           </Route>
           <Route>
             <NoMatch />

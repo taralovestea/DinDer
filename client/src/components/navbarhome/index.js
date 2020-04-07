@@ -15,9 +15,18 @@ function navBarHome(props) {
         <a className="navbar-item">
           Welcome <h1>{props.user.userName}</h1>
         </a>
+        </div>
       </div>
 
-    </div>
+      <div className="navbar-end">
+        <div className="navbar-item">
+          <div className="buttons">
+            <a className="button is-light">
+              Log Out
+                    </a>
+          </div>
+        </div>
+      </div>
   </nav>
 
 }

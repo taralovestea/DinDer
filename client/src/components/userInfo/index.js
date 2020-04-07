@@ -5,12 +5,7 @@ function userInfo() {
     <div className="hero-body">
       <div className="columns is-mobile ">
         <div className="column is-one-fifth">
-          <figure className="image is-128x128">
-            <img className="is-rounded" id="user_icon" src="images/taralovestea.png"></img>
-          </figure>
-        </div>
-        <div>
-          <h1><a href="/profile">Edit Profile</a></h1>
+          <a className="button is-warning" href="/profile">Edit Profile</a>
         </div>
         <div className="column is-four-fifths">
           <div className="container">
