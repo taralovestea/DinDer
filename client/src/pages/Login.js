@@ -21,10 +21,8 @@ function Login() {
                     history.push("/home");
             })
     }, [])
-
     function handleFormSubmit(event) {
         event.preventDefault();
-
         console.log("you got here - login")
         if (formObject.email && formObject.password) {
             API.loginUser({
