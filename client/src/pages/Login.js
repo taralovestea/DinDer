@@ -69,9 +69,9 @@ function Login() {
                         </div>
                         <div className="field">
                             <p className="control">
-                                <FormBtn id="form_login" onClick={handleFormSubmit}><a href="/home">
+                                <FormBtn id="form_login" onClick={handleFormSubmit}><Link to="/home">
                                     Login
-                                    </a>
+                                    </Link>
                                 </FormBtn>
                             </p>
                         </div>

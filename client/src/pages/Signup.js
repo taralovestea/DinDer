@@ -89,7 +89,7 @@ function Signup() {
                             </p>
                         </div>
                     </form>
-                    <p>Already have an account? Login <a href="/">HERE</a></p>
+                    <p>Already have an account? Login <Link to="/">HERE</Link></p>
                 </div>
             </section>
             <div></div>
