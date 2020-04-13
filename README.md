@@ -1,7 +1,8 @@
 # DinDer
 Find random DinDer users to match with based on experience, dedication level and skills.
 
-< PUT A GIF HERE >
+![2020-04-07 12 20 53](https://user-images.githubusercontent.com/59029999/78699940-4daafd80-78ca-11ea-92b4-7ce4199ea896.gif)
+
 
 AS A DUNGEONS AND DRAGONS PLAYER I want to find fellow gamers around the world that match my dedication level, experience level and skillset to play with.
 
@@ -19,9 +20,7 @@ npm start
 
 ```
 
-## Usage
 
-< PUT A GIF HERE >
 
 
 ### Login/Signup
@@ -31,7 +30,6 @@ npm start
 
  - Links to either is at the bottom of the other
 
-![2020-04-07 12 20 53](https://user-images.githubusercontent.com/59029999/78699940-4daafd80-78ca-11ea-92b4-7ce4199ea896.gif)
 
 
 ### Members Interaction
